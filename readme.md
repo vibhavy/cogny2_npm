@@ -31,7 +31,7 @@ Generation of the token
 
 ```javascript
 const { VerificationToken } = require('cogny2');
-const vt1 = new VerificationToken({verifierKey});
+const vt1 = new VerificationToken({generatorKey});
 
 const tokenPayloadToEncrypt{
   "_id": "658005dd25b068ae229b58e3",
@@ -55,7 +55,7 @@ Verification of the token
 
 ```javascript
 const { VerificationToken } = require('cogny2');
-const vt2 = new VerificationToken({generatorKey});
+const vt2 = new VerificationToken({verifierKey});
 
 // returns true/false
 const generatedTokenVerified = await vt2.verify(encryptedToken);
